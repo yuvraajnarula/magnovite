@@ -3,21 +3,21 @@
     import Nav from "../../component/Nav.svelte";
     import Card from "../../component/Card.svelte";
     let events = [{
-        "title": "event1",
+        "title": "School of Business and Management",
         "desc" : "lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. ",
-        "link" : "/event/event1",
+        "link" : "/event/businessandmanagement",
     },{
-        "title": "event2",
+        "title": "School of Engineering",
         "desc" : "lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. ",
-        "link" : "/event/event2",
+        "link" : "/event/engineering",
     },{
-        "title": "event3",
+        "title": "School of Psychology",
         "desc" : "lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. ",
-        "link" : "/event/event3",
+        "link" : "/event/pscyh",
     },{
-        "title": "event4",
+        "title": "School of Architecture",
         "desc" : "lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. ",
-        "link" : "/event/event4",
+        "link" : "/event/arch",
     }]
 </script>
 <div class="about-div">

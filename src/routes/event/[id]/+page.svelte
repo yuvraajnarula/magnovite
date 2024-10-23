@@ -1,29 +1,22 @@
 <script>
-    import { page } from '$app/stores'; // to access the route parameter
+    import { page } from '$app/stores';
     import "../../../public/main.css";
     import Nav from "../../../component/Nav.svelte";
     import Card from "../../../component/Card.svelte";
-
-    // Access the event ID from the URL
     let eventId;
-    $: eventId = $page.params.id; // dynamically update based on URL
-
-    // Dummy event data (you can fetch actual data using fetch API or load functions)
-    let eventTitle = `Event ${eventId}`;
-    let eventDescription = `This is the description of event ${eventId}. More details to be added here.`;
-    let eventLink = "#";
+    $: eventId = $page.params.id; 
 </script>
 
-<Nav />  <!-- Navigation Bar Component -->
+<Nav />
 
 <div class="event-div">
     <div class="bg-bubble"></div>
     <div class="event-info">
         <h1>
-            {eventTitle}
+            {eventId}
         </h1>
         <p>
-            {eventDescription}
+            This is a test event
         </p>
     </div>
 </div>
