@@ -42,7 +42,7 @@
             Magnovite'24
         </h1>
         <p>
-            lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. 
+            MAGNOVITE is the annual flagship fest organised by CHRIST (Deemed To be University), Kengeri Campus. It is an enigmatic nexus of creativity and collaboration, bringing healthy competition and positive connections between participants. It returns this year with its 14th edition, bringing back its unfading charm.
         </p>
     </div>
     <div class="social-div">

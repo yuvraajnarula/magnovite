@@ -1,23 +1,35 @@
+<script>
+    const formLink="https://linktr.ee/magnovite24christkengeri";
+    
+</script>
 <div class="nav-component">
     <div class="nav-logo">
     </div>
     <div class="nav-links">
         <ul>
             <li>
-                Home
+                <a href="/" rel="noopener noreferrer">
+                    Home
+                </a>
             </li>
             <li>
-                Events
+                <a href="/event" rel="noopener noreferrer">
+                    Events
+                </a>
             </li>
             <li>
-                Gallery
+                <a href="/gallery" rel="noopener noreferrer">
+                    Gallery
+                </a>
             </li>
             <li>
-                Contact
+                <a href="/contact" rel="noopener noreferrer">
+                    Contact
+                </a>
             </li>
         </ul>
     </div>
-    <div class="nav-link-btn">
+    <div class="nav-link-btn" on:click={() => window.open(formLink, '_blank')}>
         Register
     </div>
 </div>

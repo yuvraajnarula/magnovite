@@ -6,5 +6,5 @@
 <div class="card-component">
     <h2>{title}</h2>
     <p>{description.length > 100 ? description.slice(0, 100) + '...' : description}</p>
-    <span aria-label="{link}">Learn more</span>
+    <a href="{link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span>Learn more</span></a>
 </div>
