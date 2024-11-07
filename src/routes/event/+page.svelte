@@ -2,6 +2,7 @@
     import "../../public/main.css";
     import Nav from "../../component/Nav.svelte";
     import Card from "../../component/Card.svelte";
+  import MobileNav from "../../component/MobileNav.svelte";
     let events = [{
         "title": "Technical Events",
         "desc" : "Dive into the latest tech trends and advancements with hands-on experiences.",
@@ -31,6 +32,7 @@
 <div class="about-div">
     <div class="bg-bubble"></div>
     <Nav />
+    <MobileNav />
     <div class="about-info">
         <h1>
             Our Events

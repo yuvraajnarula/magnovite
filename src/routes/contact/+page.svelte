@@ -2,11 +2,13 @@
     import "../../public/main.css";
     import Nav from "../../component/Nav.svelte";
     import Card from "../../component/Card.svelte";
+  import MobileNav from "../../component/MobileNav.svelte";
 </script>
 <div class="contact-div">
     <div class="bg-bubble"></div>
     <div class="bg-bubble-1"></div>
     <Nav />
+    <MobileNav />
     <div class="contact-flex">
         <div class="contact-info">
             <h1>Contact us</h1>

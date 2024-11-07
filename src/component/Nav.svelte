@@ -1,6 +1,5 @@
 <script>
     const formLink="https://linktr.ee/magnovite24christkengeri";
-    
 </script>
 <div class="nav-component">
     <div class="nav-logo">

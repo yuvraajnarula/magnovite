@@ -412,3 +412,118 @@ html {
     backdrop-filter: blur(4.8px); 
     color: #111; 
 }
+.mobile-nav-flex,.mobile-nav-component{
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    .nav-component{
+        display: none;
+    }
+    .mobile-nav-flex{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .mobile-nav-flex .mobile-logo{
+        width: 10vw;
+        height: 10vw;
+        padding: 2.5vw;
+        background:url("/magnovite.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .mobile-nav-flex .hamburger{
+        font-size: 7.5vw;
+        margin: 1.5vw 2.5vw;
+        color: #fff;
+    }
+    .mobile-nav-component{
+        display: block;
+        width: 0;
+        height: 100%;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.05); 
+        backdrop-filter: blur(6.4px); 
+        overflow-x: hidden;
+        transition: 0.5s ease;
+        position: fixed;
+    }
+    .mobile-nav-component.open {
+        width: 100%;
+    }
+
+    .hamburger-menu{
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .hamburger-menu .burger-list{
+        list-style: none;
+        margin-left: -10vw;
+    }
+    .hamburger-menu .burger-list li a{
+        color: #fff;
+        font-size: 5vw;
+        display: block;
+        transition: all 0.5s ease;
+        text-decoration: none;
+        margin-bottom: 5%;
+    }
+    .mobile-nav-component .closebtn {
+        position: absolute;
+        font-size: 3vw;
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+      }
+    .home-info ul {
+        margin-left: -12.5vw;
+        font-size: 2.9vw;
+        width: 85%;
+    }     
+    .home-info ul li{
+        padding: 7.5px;
+    }
+    .home-info ul svg{
+        transform: scale(0.8);
+    } 
+    .home-info ul span{ margin-left: 1.5vw;}
+    .home-div h1{
+        font-size: 10vw;
+    }
+    .home-div p{
+        font-size: 4.5vw;
+        width: 85%;
+    }
+    .social-div{
+        width: 45%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        margin-left: 7.5vw;
+        margin-top:5vw;
+    }
+    .social-div ul{
+        flex-direction: row;
+    }
+    .social-div ul li {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+        margin-top: -2.5vw;
+    }
+    .social-div ul li .line {
+        height: 80%;
+        background-color: #343434;
+        border-radius: 50px;
+        width: 1vw;
+    }
+}

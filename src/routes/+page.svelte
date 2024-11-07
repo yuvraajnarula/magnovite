@@ -1,11 +1,13 @@
 <script>
     import "../public/main.css";
     import Nav from "../component/Nav.svelte";
+  import MobileNav from "../component/MobileNav.svelte";
 </script>
 <div class="home-div">
     <div class="bg-bubble">
     </div>
     <Nav />
+    <MobileNav />
     <div class="home-info">
         <ul>
             <li>
