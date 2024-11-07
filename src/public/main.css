@@ -526,4 +526,43 @@ html {
         border-radius: 50px;
         width: 1vw;
     }
+    .about-info h1{
+        font-size: 10vw;
+    }
+    .about-info p {
+        width: 85%;
+    }
+    .about-grid{
+        display: flex !important;
+        flex-direction: column;
+    }
+    .card-component {
+        height: fit-content !important;
+    }
+    .contact-flex{
+        flex-direction: column-reverse;
+    }
+    .contact-flex iframe{
+        width: 97.5%;
+        margin-left: -2.5vw;
+    }
+    .contact-div h1{
+        font-size: 10vw;
+    }
+    .contact-flex p{
+        width: 85%;
+    }
+    .contact-div select{
+        margin-top: 2.54vw;
+    }
+    .gallery-div h1{
+        font-size: 10vw;
+    }
+    .gallery-div p{
+        width: 85%;
+    }
+    .gallery-flex{
+        flex-direction: column;
+        width: 100%;
+    }
 }
