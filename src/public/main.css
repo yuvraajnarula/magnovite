@@ -570,4 +570,38 @@ html {
     .gallery-div p{
         width: 85%;
     }
+    /* .gallery-flex-1,
+    .gallery-flex-2,
+    .gallery-flex-3{
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .gallery-flex-1{
+        flex: 3 !important;
+    }
+    .gallery-flex-3{
+        flex: .25 !important;
+    } */
+    .gallery-flex{
+        flex-direction: column;
+    }
+    .gallery-flex-1,
+    .gallery-flex-2,
+    .gallery-flex-3{
+        width: 100%;
+        flex: 4 !important;
+    }
+    .gal-1,
+    .gal-2,
+    .gal-3,
+    .gal-4,
+    .gal-5{
+        width: 100% !important;
+        height: 70vw !important;
+        flex: 3.5 !important;
+        margin-bottom: 2vw !important;  
+    }
+    .gal-l,.gal-r{
+        height: 15vw !important;
+    }
 }
