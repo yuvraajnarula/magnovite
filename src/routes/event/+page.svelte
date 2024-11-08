@@ -2,11 +2,11 @@
     import "../../public/main.css";
     import Nav from "../../component/Nav.svelte";
     import Card from "../../component/Card.svelte";
-  import MobileNav from "../../component/MobileNav.svelte";
+    import MobileNav from "../../component/MobileNav.svelte";
     let events = [{
         "title": "Technical Events",
         "desc" : "Dive into the latest tech trends and advancements with hands-on experiences.",
-        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewforml",
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
     },{
         "title": "Management Events",
         "desc" : "Explore insights into the world of business, networking, and innovation.",

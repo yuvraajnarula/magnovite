@@ -13,7 +13,14 @@
         <div class="contact-info">
             <h1>Contact us</h1>
             <p>
-                lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. 
+                <span>Address : </span> Dharmaram College Post, Hosur Road, Bengaluru - 560029,
+                Karnataka, India
+                <br>
+                <span>Tel No : </span>+91 804012 9100 / 9600
+                <br>
+                <span>Email : </span> mail@christuniversity.in
+                <br>
+                <span>Web : </span> http://www.christuniversity.in                
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3QAe09f-B7hC1VS_tmR-UN0NNy9KwtSzeXTqLmQqi2ibjyQ/viewform" target="_blank">
                 <span>

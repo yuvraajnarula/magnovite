@@ -51,7 +51,7 @@
     <center>
         <h1>Our Gallery</h1>
         <p>
-            Lorem ipsum is a sample text for content display to show.
+            Checkout our memory hauls from last year and be a part of it.
         </p>
         <div class="gallery-flex">
             <div class="gallery-flex-1">
@@ -98,7 +98,7 @@
 <style>
     /* Add your CSS styling here */
     .gal-1,.gal-2,.gal-3,.gal-4,.gal-5{
-        transition: all 0.5s ease;
+        transition: background-image 0.5s ease;
     }
     .gal-l,.gal-r{
         cursor: pointer;

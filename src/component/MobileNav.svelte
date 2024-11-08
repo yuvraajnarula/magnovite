@@ -24,7 +24,7 @@
             <li><a href="/event">Event</a></li>
             <li><a href="/gallery">Gallery</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/register" target="_blank">Register</a></li>
+            <li><a href="https://linktr.ee/magnovite24christkengeri" target="_blank">Register</a></li>
         </ul>
     </div>
 </div>
