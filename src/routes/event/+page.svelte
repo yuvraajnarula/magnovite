@@ -3,214 +3,226 @@
     import Nav from "../../component/Nav.svelte";
     import Card from "../../component/Card.svelte";
     import MobileNav from "../../component/MobileNav.svelte";
-  import Footer from "../../component/Footer.svelte";
-  import { onMount } from "svelte";
-  import Carousel from "../../component/Carousel.svelte";
-      // let events = [{
-    //     "title": "Technical Events",
-    //     "desc" : "Dive into the latest tech trends and advancements with hands-on experiences.",
-    //     //https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform
-    //     "link" : "/event/technical",
-    // },{
-    //     "title": "Management Events",
-    //     "desc" : "Explore insights into the world of business, networking, and innovation.",
-    //     //https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform
-    //     "link" : "/event/management",
-    // },{
-    //     "title": "Psychology Events",
-    //     "desc" : "Gain understanding and insights into human behavior and mental wellness.",
-    //     //https://docs.google.com/forms/d/e/1FAIpQLSci6pUM6ma06tt3Jtf3OtZw_XFIth8vypqi6-XtjjUDPKZSgw/viewform
-    //     "link" : "/event/psychology",
-    // },{
-    //     "title": "Cultural Events",
-    //     "desc" : "Celebrate diversity through art, music, and traditions from around the world.",
-    //     //https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform
-    //     "link" : "/event/cultural",
-    // },{
+    import Footer from "../../component/Footer.svelte";
+    import { onMount } from "svelte";
+    import Carousel from "../../component/Carousel.svelte";
     //     "title": "Debate Events",
     //     "desc" : "Engage in thought-provoking debates and sharpen your persuasive skills.",
     //     //https://docs.google.com/forms/d/1fmqfJHTdScI2an-g7dyijg52qrZfhoYzox6rkJFEio0/viewform
     //     "link" : "/event/debate",
-    // },{
-    //     "title": "Design Events",
-    //     "desc" : "Unleash creativity with workshops and challenges in various design fields.",
-    //     //https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform
-    //     "link" : "/event/design",
-    // }]
     let events = [
     // Management Events
     {
         "title": "BEST MANAGEMENT TEAM",
         "desc": "Compete in corporate strategy and team dynamics for top management honors.",
-        "tags": ["management", "strategy"]
+        "tags": ["management", "strategy"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "CORPORATE SOCIAL RESPONSIBILITY",
         "desc": "Explore the role of companies in making a positive societal impact.",
-        "tags": ["management", "social impact"]
+        "tags": ["management", "social impact"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "BEST MANAGER",
         "desc": "Showcase leadership skills through challenges in a competitive environment.",
-        "tags": ["management", "leadership"]
+        "tags": ["management", "leadership"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "FINANCE",
         "desc": "Navigate complex financial scenarios in a competitive team-based event.",
-        "tags": ["management", "finance"]
+        "tags": ["management", "finance"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "HUMAN RESOURCES",
         "desc": "Engage in exciting HR-based challenges, including case studies and hiring simulations.",
-        "tags": ["management", "HR"]
+        "tags": ["management", "HR"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "PUBLIC RELATIONS",
         "desc": "Develop communication strategies in a fast-paced PR competition.",
-        "tags": ["management", "PR"]
+        "tags": ["management", "PR"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "MARKETING",
         "desc": "Pitch and market products effectively to stand out in the competition.",
-        "tags": ["management", "marketing"]
+        "tags": ["management", "marketing"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "BUSINESS QUIZ",
         "desc": "Test your business knowledge with a challenging quiz competition.",
-        "tags": ["management", "quiz"]
+        "tags": ["management", "quiz"],
+        "link": "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
     {
         "title": "BUSINESS PLAN",
         "desc": "Create a detailed business plan, from idea inception to execution.",
-        "tags": ["management", "planning"]
+        "tags": ["management", "planning"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform"
     },
 
     // Architecture Events
     {
         "title": "REVIVAL OUTLOOK",
         "desc": "Fashion design competition focused on innovative concepts.",
-        "tags": ["architecture", "design"]
+        "tags": ["architecture", "design"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform"
     },
     {
         "title": "SPILL ART",
         "desc": "Create art from a spilled ink pattern using unique techniques.",
-        "tags": ["architecture", "art"]
+        "tags": ["architecture", "art"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform"
     },
     {
         "title": "TERRABSTRACT",
         "desc": "Sculpt abstract designs using clay provided on-site.",
-        "tags": ["architecture", "sculpture"]
+        "tags": ["architecture", "sculpture"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform"
     },
     {
         "title": "GLIMPSE INTO THE UNFOCUSED",
         "desc": "An online photography competition based on assigned themes.",
-        "tags": ["architecture", "photography"]
+        "tags": ["architecture", "photography"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform"
     },
 
     // Technical Events
     {
         "title": "RC ROBOSOCCER 2.0",
         "desc": "Build and program robots to play soccer and compete with other teams.",
-        "tags": ["technical", "robotics", "engineering"]
+        "tags": ["technical", "robotics", "engineering"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
     {
         "title": "MAZE – MERISE",
         "desc": "Design an autonomous robot to navigate a maze efficiently.",
-        "tags": ["technical", "robotics", "programming"]
+        "tags": ["technical", "robotics", "programming"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
     },
     {
         "title": "ENIGMA REDESIGNED",
         "desc": "A cryptographic challenge with multiple rounds of code-breaking and debugging.",
-        "tags": ["technical", "coding", "cryptography"]
+        "tags": ["technical", "coding", "cryptography"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
     {
         "title": "SPARK-A-THON",
         "desc": "Pitch innovative tech solutions through ideation and prototyping.",
-        "tags": ["technical", "innovation", "pitching"]
+        "tags": ["technical", "innovation", "pitching"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
     {
         "title": "SMART PITCH",
         "desc": "Pitch civil engineering ideas with innovative business models.",
-        "tags": ["technical", "pitching", "civil engineering"]
+        "tags": ["technical", "pitching", "civil engineering"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
     {
         "title": "INNOVATIVE CAD DESIGNER",
         "desc": "Showcase creativity and skill in computer-aided design.",
-        "tags": ["technical", "design", "CAD"]
+        "tags": ["technical", "design", "CAD"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
     {
         "title": "THE GENTLEMAN BURGLAR",
         "desc": "Simulate a bank heist through rounds focused on decryption, debugging, and circuit design.",
-        "tags": ["technical", "coding", "circuit design"]
+        "tags": ["technical", "coding", "circuit design"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
     {
         "title": "OHM-AZING BUILD-A-THON",
         "desc": "Timed circuit-building rounds to test electrical engineering skills.",
-        "tags": ["technical", "circuit design", "engineering"]
+        "tags": ["technical", "circuit design", "engineering"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
     {
         "title": "EV HACKATHON",
         "desc": "Engage in electric vehicle challenges, from part identification to real-time battery monitoring.",
-        "tags": ["technical", "engineering", "sustainability"]
+        "tags": ["technical", "engineering", "sustainability"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform"
     },
 
     // Psychology Events
     {
         "title": "HOW I MET YOUR KILLER",
         "desc": "Solve a fictional murder mystery through detective skills and teamwork.",
-        "tags": ["psychology", "mystery", "teamwork"]
+        "tags": ["psychology", "mystery", "teamwork"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSci6pUM6ma06tt3Jtf3OtZw_XFIth8vypqi6-XtjjUDPKZSgw/viewform"
     },
     {
         "title": "AD-VENTURE",
         "desc": "Reimagine ordinary products and pitch creative marketing campaigns.",
-        "tags": ["psychology", "creativity", "marketing"]
+        "tags": ["psychology", "creativity", "marketing"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSci6pUM6ma06tt3Jtf3OtZw_XFIth8vypqi6-XtjjUDPKZSgw/viewform"
     },
-
+    //debate
+    {
+        "title": "Convince and Conquer : The Art of Persuasion",
+        "desc" : 'A two-day event designed to challenge students to articulate and advocate for robust ideas on the theme of “Achieving Academic and Professional Balance for Industry Readiness.”'
+        ,"tags" : ["debate","academia"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSdqz6Gyk9WOKXyShoXbT7xHjuLadrF_CsHN3X2ELwpNbYwTTA/viewform"
+    },
     // Cultural Events
     {
         "title": "BATTLE OF BANDS",
         "desc": "Showcase your musical talent in an energetic battle of bands competition.",
-        "tags": ["cultural", "music", "performance"]
+        "tags": ["cultural", "music", "performance"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "ACAPELLA AND GROUP SINGING",
         "desc": "Team singing event celebrating vocal harmony and creativity.",
-        "tags": ["cultural", "music", "singing"]
+        "tags": ["cultural", "music", "singing"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "SOLO SINGING (WESTERN)",
         "desc": "Individual singing competition in the western music category.",
-        "tags": ["cultural", "music", "solo"]
+        "tags": ["cultural", "music", "solo"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "SOLO SINGING (INDIAN)",
         "desc": "Showcase talent in Indian music with solo singing performances.",
-        "tags": ["cultural", "music", "Indian"]
+        "tags": ["cultural", "music", "Indian"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "INDIAN GROUP DANCE",
         "desc": "A group dance competition celebrating Indian dance forms.",
-        "tags": ["cultural", "dance", "Indian"]
+        "tags": ["cultural", "dance", "Indian"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "WESTERN GROUP DANCE",
         "desc": "Group dance competition focusing on Western dance styles.",
-        "tags": ["cultural", "dance", "Western"]
+        "tags": ["cultural", "dance", "Western"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "SPOT CHOREOGRAPHY",
         "desc": "A fast-paced choreography competition with on-the-spot themes.",
-        "tags": ["cultural", "dance", "choreography"]
+        "tags": ["cultural", "dance", "choreography"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "STREET PLAY",
         "desc": "Perform compelling street theater with social or comedic themes.",
-        "tags": ["cultural", "theater", "social"]
+        "tags": ["cultural", "theater", "social"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     },
     {
         "title": "INK AND TALE",
         "desc": "Create a captivating short story or comic based on assigned characters and genres.",
-        "tags": ["cultural", "creativity", "storytelling"]
+        "tags": ["cultural", "creativity", "storytelling"],
+        "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform"
     }
 ];
 // Create a Set to store unique tags
@@ -298,7 +310,7 @@ let activeTag = 'All';  // Add this line
         <Carousel {tags} {activeTag} {handleTagClick} />
         <div class="about-grid">
             {#each filteredEvents as event}
-                <Card title={event.title} description={event.desc} tag={event.tags}/>
+                <Card title={event.title} description={event.desc} tag={event.tags} link={event.link}/>
             {/each}
         </div>
     </div>

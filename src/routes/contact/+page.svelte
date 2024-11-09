@@ -7,7 +7,15 @@
   let contact = [
     {
         "name": "Anirudh Sharma",
-        "contact": ""
+    },
+    {
+        "name": "Tanmai Mukashi",
+    },
+    {
+        "name": "Vyshnavi",
+    },
+    {
+        "name" : "Meet Ravrani"
     }
   ]
 </script>

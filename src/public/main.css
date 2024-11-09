@@ -295,7 +295,7 @@ html {
 }
 .about-info .about-grid .card-component{
     width: 90%;
-    height: 11.5vw;
+    height: calc(max(11.5vw, min(25vh, 200px))); 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4.8px);
     border-radius: 10px;
