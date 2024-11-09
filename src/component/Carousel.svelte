@@ -53,23 +53,25 @@
     .tags-flex ul::-webkit-scrollbar {
         display: none;
     }
-    .tags-flex ul li button{
-        cursor: pointer;
-        padding: 10px;
-        position: relative;
-        min-width: 3vw;
-        max-width: 10vw;
-        border: none;
-        margin: 10px 10px;
-        letter-spacing: 1px;
-        font-family: "Inter", sans-serif;
-        font-size: 0.9vw;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(5.6px);
-        border: 2px solid rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-        transition: all 0.5s ease;
-    }
+    .tags-flex ul li button {
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+    border: none;
+    margin: 10px 10px;
+    letter-spacing: 1px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9vw;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5.6px);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    white-space: nowrap;  
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+}
     .tags-flex ul li button:hover{
         transform: translateY(-5px);
     }
