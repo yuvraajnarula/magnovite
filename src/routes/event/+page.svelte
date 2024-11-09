@@ -221,6 +221,22 @@ events.forEach(event => {
     });
 });
 const tags = Array.from(uniqueTags);
+onMount(()=>{
+    let search = document.querySelector(".search");
+    search.addEventListener("keyup",()=>{
+        let query = search.value.toLowerCase();
+        let cards = document.querySelectorAll(".card-component");
+        cards.forEach(card=>{
+            let title = card.querySelector(".card-title").textContent.toLowerCase();
+            let tags = card.querySelector(".s").value;
+            if (title.includes(query) || tags.includes(query)){
+                card.style.display = "block";
+            }else{
+                card.style.display = "none";
+            }
+        })
+    })
+});
 </script>
 <div class="about-div">
     <div class="bg-bubble"></div>
@@ -262,7 +278,7 @@ const tags = Array.from(uniqueTags);
         <Carousel tags={tags} />
         <div class="about-grid">
             {#each events as event}
-                <Card title={event.title} description={event.desc} />
+                <Card title={event.title} description={event.desc} tag={event.tags}/>
             {/each}
         </div>
     </div>

@@ -14,7 +14,7 @@
         </li>
         {#each tags as tag}
         <li>
-            <button>
+            <button class="tag-button">
                 <span>
                     {tag[0].toUpperCase() + tag.slice(1)}
                 </span>
