@@ -1,25 +1,32 @@
-
 <script>
     export let tags = [];
+    export let activeTag = 'All'; 
     let scrollContainer;
+    export let handleTagClick;
 </script>
+
 <div class="tags-flex">
     <ul class="tags-carousel" bind:this={scrollContainer}>
         <li>
-            <button>
-                <span>
-                    All
-                </span>
+            <button 
+                class="tag-button {activeTag === 'All' ? 'active' : ''}" 
+                on:click={() => handleTagClick('All')}
+            >
+                <span>All</span>
             </button>
         </li>
         {#each tags as tag}
-        <li>
-            <button class="tag-button">
-                <span>
-                    {tag[0].toUpperCase() + tag.slice(1)}
-                </span>
-            </button>
-        </li>
+            <li>
+                <button 
+                    class="tag-button {activeTag === tag ? 'active' : ''}" 
+                    on:click={() => {
+                        console.log("Clicked tag:", tag);
+                        handleTagClick(tag);
+                    }}
+                >
+                    <span>{tag[0].toUpperCase() + tag.slice(1)}</span>
+                </button>
+            </li>
         {/each}
     </ul>
 </div>
@@ -66,8 +73,16 @@
     .tags-flex ul li button:hover{
         transform: translateY(-5px);
     }
+    .tags-flex ul li button.active {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    .tags-flex ul li button.active span {
+        color: #fff;
+    }
     .tags-flex ul li button span{
         width: fit-content;
+        color: rgba(255, 255, 255, 0.7);
     }
     @media only screen and (max-width: 768px){
         .tags-flex ul li button{

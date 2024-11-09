@@ -221,23 +221,43 @@ events.forEach(event => {
     });
 });
 const tags = Array.from(uniqueTags);
-onMount(()=>{
-    let search = document.querySelector(".search");
-    search.addEventListener("keyup",()=>{
-        let query = search.value.toLowerCase();
-        let cards = document.querySelectorAll(".card-component");
-        cards.forEach(card=>{
-            let title = card.querySelector(".card-title").textContent.toLowerCase();
-            let tags = card.querySelector(".s").value;
-            if (title.includes(query) || tags.includes(query)){
-                card.style.display = "block";
-            }else{
-                card.style.display = "none";
-            }
-        })
-    })
-});
+let activeTag = 'All';  // Add this line
+    let searchQuery = '';   // Add this line
+    let filteredEvents = events;
+
+    function handleTagClick(selectedTag) {
+        activeTag = selectedTag;
+        filterEvents();
+    }
+
+    function filterEvents() {
+        // First filter by tag
+        let tagFiltered = activeTag === 'All' 
+            ? events 
+            : events.filter(event => event.tags.includes(activeTag));
+        
+        // Then filter by search query
+        if (searchQuery) {
+            const query = searchQuery.toLowerCase();
+            filteredEvents = tagFiltered.filter(event => 
+                event.title.toLowerCase().includes(query) || 
+                event.tags.some(tag => tag.toLowerCase().includes(query))
+            );
+        } else {
+            filteredEvents = tagFiltered;
+        }
+    }
+
+    onMount(() => {
+        let search = document.querySelector(".search");
+        search.addEventListener("keyup", (e) => {
+            searchQuery = e.target.value;
+            filterEvents();
+        });
+    });
+
 </script>
+
 <div class="about-div">
     <div class="bg-bubble"></div>
     <Nav />
@@ -274,10 +294,10 @@ onMount(()=>{
                     {/each}
                 </ul>
         </div> --><br><br>
-        <input type="search" placeholder="Search Events" class="search"/>
-        <Carousel tags={tags} />
+        <input type="search" placeholder="Search Events" class="search" bind:value={searchQuery}/>
+        <Carousel {tags} {activeTag} {handleTagClick} />
         <div class="about-grid">
-            {#each events as event}
+            {#each filteredEvents as event}
                 <Card title={event.title} description={event.desc} tag={event.tags}/>
             {/each}
         </div>
@@ -302,6 +322,14 @@ onMount(()=>{
     }
     .search:focus{
         outline: none;
+        background: rgba(255, 255, 255, 0.08);
+        border:2px solid rgba(255, 255, 255, 0.08);
+    }
+    .active{
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .active span{
+        color: #111 !important;
     }
     @media only screen and (max-width:768px){
         .search{
