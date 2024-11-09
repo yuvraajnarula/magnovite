@@ -2,20 +2,41 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: #111;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 html {
     padding: 0;
+    width: 100%;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background:transparent  ;
 }
 
+::-webkit-scrollbar
+{
+	width: 5px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background:linear-gradient(180deg, #0F9E78 30.5%, #015152 70%);;
+}
 .home-div {
     height: 100vh;
     width: 100%;
-    position: relative; /* Set position to relative to control the z-index of children */
-}
+    position: relative; }
 .bg-bubble,.bg-bubble-1
 {
     width: 750px;
@@ -30,6 +51,44 @@ html {
 }
 .register-div .bg-bubble{
     top: 110%;
+}
+.tags-flex {
+    width: 100%;
+}
+.tags-flex ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-left: -3vw;
+    padding-left: 5vw;
+    margin-right: 4vw;
+    transition: all 0.5s ease;
+}
+.tags-flex ul li button{
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    margin: 10px 10px ;
+    letter-spacing: 1px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9vw;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5.6px);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.tags-flex ul li button:hover{
+   transform: translateY(-5px);
+}
+.tags-flex ul li button span{
+    width: fit-content;
+}
+.contact-div,.gallery-div{
+    height: fit-content;
+    margin-bottom: 5vh;
 }
 .contact-div .bg-bubble-1{
     top: -10%;
@@ -222,8 +281,10 @@ html {
 }
 .about-info .about-grid{
     width: 92.5%;
-    margin-top: 2.2vh;
-    height: 30vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: fit-content;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3,27.5vw);
     gap: 15px;
@@ -234,7 +295,7 @@ html {
 }
 .about-info .about-grid .card-component{
     width: 90%;
-    height: 10.5vw;
+    height: 11.5vw;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4.8px);
     border-radius: 10px;
@@ -379,6 +440,41 @@ html {
 }
 .contact-flex iframe{
     border-radius: 10px;
+}
+.footer{
+    height: 20vh;
+    color: #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5vw;
+}
+.footer-icon-1{
+    background:url("magnovite.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    width: 7.5vh;
+    height: 7.5vh;
+}
+.footer-icon-2{
+    background:url("christwhite.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+    width: 26.5vh;
+    height: 8.5vh;
+    margin: 0 15px;
 }
 .contact-dropdown {
     appearance: none; 

@@ -2,6 +2,7 @@
     import "../public/main.css";
     import Nav from "../component/Nav.svelte";
   import MobileNav from "../component/MobileNav.svelte";
+  import Footer from "../component/Footer.svelte";
 </script>
 <div class="home-div">
     <div class="bg-bubble">
@@ -35,7 +36,7 @@
                 </svg>
                     
                 <span>
-                    Christ (Deemed to be University), Kengeri Campus, Bangalore
+                    Christ University, Kengeri Campus, Bangalore
                 </span>
             </li>
         </ul>
@@ -79,3 +80,4 @@
         </ul>
     </div>
 </div>
+<Footer />

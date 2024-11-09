@@ -3,6 +3,7 @@
     import Nav from "../../component/Nav.svelte";
     import MobileNav from "../../component/MobileNav.svelte";
     import { onMount } from 'svelte';
+  import Footer from "../../component/Footer.svelte";
 
     let bgList = [
         "/AT3A3005.JPG",
@@ -104,3 +105,4 @@
         cursor: pointer;
     }
 </style>
+<Footer />
