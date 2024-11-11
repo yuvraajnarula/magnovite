@@ -20,6 +20,9 @@
     <span class="closebtn" on:click={closeNav}>&times;</span>
     <div class="hamburger-menu">
         <ul class="burger-list">
+            <li>
+                <img src="/magnovite.png" width="100" height="100" alt="">
+            </li>
             <li><a href="/">Home</a></li>
             <li><a href="/event">Event</a></li>
             <li><a href="/gallery">Gallery</a></li>

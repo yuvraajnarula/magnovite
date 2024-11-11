@@ -83,6 +83,3 @@
     <Footer />
     <div style:height=".5vh"></div>
 </div>
-<style>
-
-</style>

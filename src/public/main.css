@@ -519,7 +519,7 @@ html {
         position: fixed;
     }
     .mobile-nav-component.open {
-        width: 768px;
+        width: 250px;
     }
 
     .hamburger-menu{
