@@ -85,11 +85,7 @@ html {
 }
 .tags-flex ul li button span{
     width: fit-content;
-}
-.contact-div,.gallery-div{
-    height: fit-content;
-    margin-bottom: 5vh;
-}
+}   
 .contact-div .bg-bubble-1{
     top: -10%;
     left: -10%;
@@ -441,41 +437,6 @@ html {
 .contact-flex iframe{
     border-radius: 10px;
 }
-.footer{
-    height: 20vh;
-    color: #fff;
-    border-top: 2px solid rgba(255, 255, 255, 0.05);
-    width: 100%;
-    margin-top: 5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer-icon{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 5vw;
-}
-.footer-icon-1{
-    background:url("magnovite.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 10px;
-    width: 7.5vh;
-    height: 7.5vh;
-}
-.footer-icon-2{
-    background:url("christwhite.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 10px;
-    width: 26.5vh;
-    height: 8.5vh;
-    margin: 0 15px;
-}
 .contact-dropdown {
     appearance: none; 
     -webkit-appearance: none; 
@@ -558,7 +519,7 @@ html {
         position: fixed;
     }
     .mobile-nav-component.open {
-        width: 100%;
+        width: 768px;
     }
 
     .hamburger-menu{

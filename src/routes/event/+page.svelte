@@ -315,7 +315,6 @@ let activeTag = 'All';  // Add this line
         </div>
     </div>
 </div>
-<Footer />
 <style>
     .search{
         background: rgba(255, 255, 255, 0.05);
