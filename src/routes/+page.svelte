@@ -79,4 +79,10 @@
             </li>
         </ul>
     </div>
+    <div style:height="10vh"></div>
+    <Footer />
+    <div style:height=".5vh"></div>
 </div>
+<style>
+
+</style>

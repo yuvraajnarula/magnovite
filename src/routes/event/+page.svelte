@@ -314,6 +314,7 @@ let activeTag = 'All';  // Add this line
             {/each}
         </div>
     </div>
+    <Footer />
 </div>
 <style>
     .search{

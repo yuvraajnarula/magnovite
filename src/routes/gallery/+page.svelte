@@ -3,6 +3,7 @@
     import Nav from "../../component/Nav.svelte";
     import MobileNav from "../../component/MobileNav.svelte";
     import { onMount } from 'svelte';
+  import Footer from "../../component/Footer.svelte";
 
     let bgList = [
         "/AT3A3005.JPG",
@@ -93,14 +94,9 @@
             </div>
         </div>
     </center>
-    <div class="footer"></div> 
+    <Footer />
 </div>
 <style>
-    .footer{
-        background-color: red;
-        height: 20vh;
-        margin-top: 2vw;
-    }
     .gallery-div{
         overflow: hidden !important;
         position: relative;
