@@ -6,16 +6,30 @@
   import Footer from "../../component/Footer.svelte";
   let contact = [
     {
+        "name" : "Jobin Shiji Daniel",
+        "role" : "Faculty Incharge",
+        "no" : 6282177450
+    },  
+  {
         "name": "Anirudh Sharma",
+        "role" : "Core Member",
+        "no" : 9315482466
+
     },
     {
         "name": "Tanmai Mukashi",
+        "role" : "Core Member",
+        "no" : 7019997296
     },
     {
         "name": "Vyshnavi",
+        "role" : "Core Member",
+        "no" : 8777366862
     },
     {
-        "name" : "Meet Ravrani"
+        "name" : "Meet Ravrani",
+        "role" : "Core Member",
+        "no" : 8105462515
     }
   ]
 </script>
@@ -52,9 +66,9 @@
                     {contact.name}
                 </h2>
                 <span>
-                    SWO Core
-                </span> <br>
-                <a href="tel:+">
+                    SWO {contact.role}
+                </span> <br><br>        
+                <a href="tel:+{contact.no}">
                     <span>
                         Phone Number
                     </span>
@@ -83,7 +97,7 @@
         border: 2px solid rgba(255,255,255,0.05);
         border-radius: 10px;
         padding: 10px;
-        height: 7.5vw;
+        height: 10vw;
         width: 15vw;
         text-align: center;
     }
@@ -107,6 +121,7 @@
         }
         .contact-card{
             width: 75vw !important;
+            padding-bottom: 2.5vw;
             height: fit-content !important;
             margin-bottom: 10vw;
         }
