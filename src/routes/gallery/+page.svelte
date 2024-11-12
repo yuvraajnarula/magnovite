@@ -5,19 +5,18 @@
     import { onMount } from 'svelte';
   import Footer from "../../component/Footer.svelte";
 
-    let bgList = [
-        "/AT3A3005.JPG",
-        "/AT3A3015.JPG", "/AT3A3017.JPG", "/AT3A3020.JPG", "/AT3A3022.JPG",
-        "/AT3A3023.JPG", "/AT3A3025.JPG", "/AT3A3200.JPG", "/AT3A3207.JPG",
+  let bgList = [
+        "/AT3A3207.JPG",
         "/DSC_0128.JPG", "/DSC_0166.JPG", "/DSC_0169.JPG", "/IMG_0173.JPG",
-        "/IMG_0269.JPG", "/IMG_0676.JPG", "/IMG_0679.JPG", "/IMG_0767.JPG",
+        "/DSC_0166.JPG", "/IMG_0676.JPG", "/IMG_0679.JPG", "/IMG_0767.JPG",
         "/IMG_0772.JPG", "/IMG_0777.JPG", "/IMG_0797.JPG", "/IMG_0824.JPG",
         "/IMG_0833.JPG", "/IMG_0850.JPG", "/IMG_0853.JPG", "/IMG_0864.JPG",
         "/IMG_1090.JPG", "/IMG_5467.JPG", "/IMG_5470.JPG", "/IMG_9700.JPG",
         "/IMG_9749.JPG", "/IMG_9824.JPG", "/IMG_9897.JPG", "/IMG_9922.JPG",
         "/IMG_9991.JPG", "/IMG_9999.JPG", "/IMG_9992.JPG",
+        "/AT3A3015.JPG", 
+        "/AT3A3005.JPG",    
     ];
-    
     let currentIndex = 0;
     let galleryImages = [
         ".gal-1",

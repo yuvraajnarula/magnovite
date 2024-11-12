@@ -119,8 +119,8 @@ html {
 }
 
 .nav-component .nav-logo {
-    height: 10vh;
-    width: 10vh;
+    height: 17.5vh;
+    width: 17.5vh;
     background: url("/magnovite.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -162,6 +162,11 @@ html {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.5s ease;
+}
+.nav-link-btn:hover{
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.7);
 }
 .home-info{
     margin-top: 10vw;
@@ -291,7 +296,7 @@ html {
 }
 .about-info .about-grid .card-component{
     width: 90%;
-    height: calc(max(11.5vw, min(25vh, 200px))); 
+    height: calc(max(13.5vw, min(25vh, 200px))); 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4.8px);
     border-radius: 10px;
@@ -302,7 +307,7 @@ html {
 }
 .about-info .about-grid .card-component p{
     margin-top: -5px;
-    width: fit-content;
+    width: 85%;
 }
 .contact-div .contact-flex a,.about-div a{
     text-decoration: none;
@@ -524,7 +529,7 @@ html {
 
     .hamburger-menu{
         position: relative;
-        top: 25%;
+        top: 25vh;
         width: 100%;
         text-align: center;
         margin-top: 30px;
