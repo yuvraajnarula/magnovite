@@ -17,7 +17,7 @@
 
     },
     {
-        "name": "Tanmai Mukashi",
+        "name": "Tanmai Mokashi",
         "role" : "Core Member",
         "no" : 7019997296
     },

@@ -21,6 +21,9 @@
     <div class="footer-event-info">
         <div class="footer-para">
             MAGNOVITE, the 14th edition of CHRIST University's flagship fest, fosters creativity, collaboration, healthy competition, and positive connections among participants.
+            <br>
+            <br>
+            - developed by <a href="https://github.com/yuvraajnarula" target="_blank" style="text-decoration:none;color: rgba(255,255,255,0.2);">Yuvraaj Narula</a>
         </div>
     
             <ul class="footer-social-links">
