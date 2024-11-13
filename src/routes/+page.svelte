@@ -128,6 +128,7 @@ onMount(()=>{
 </div>
 {/if}
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     .morph-div{
         height: 100vh;
         width: 100%;
@@ -142,8 +143,9 @@ onMount(()=>{
         transform: translateY(-25%);
         animation-name: showText;
         font-weight: 600;
-        animation-duration: 1s;
-        animation-delay: .5s;
+        animation-duration: 2s;
+        /* animation-delay: 1s; */
+        font-family: "Bebase Neue",sans-serif !important;
         animation-direction: forwards;
     }   
     .video-div{
@@ -188,9 +190,9 @@ box-shadow: 3px 20px 41px 0px rgba(255,255,255,0.0.05);
         height: 120vh;
         transition: opacity 1s ease;
         animation-name: showPosition;
-        animation-duration: 1s;
+        animation-duration: 2s;
         pointer-events: none;
-        animation-delay: 1s;
+        /* animation-delay: 0.75s; */
         animation-direction: forwards;
     }
     @keyframes showPosition{
