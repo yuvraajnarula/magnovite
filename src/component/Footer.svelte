@@ -6,8 +6,9 @@
             <div class="icon-2"></div>
         </div>
         <div class="footer-uni">
-            Established in the Mysore Road with finest ambiance of greenery and world-class infrastructure, far from the hustle-bustle of the city, the Campus provides the experience of the traditional as well as world-class facilities with department-specific buildings, libraries, research facilities and residences.
-        </div>
+            <br>
+            
+            The Mysore Road Campus offers a blend of traditional and world-class facilities, including department-specific buildings, libraries, research facilities, and residences, amidst the city's greenery.        </div>
     </div>
     <ul class="footer-links">
         <li class="header">
