@@ -97,7 +97,7 @@
         border: 2px solid rgba(255,255,255,0.05);
         border-radius: 10px;
         padding: 10px;
-        height: 10vw;
+        height: calc(max(10vw, min(15vw, 200px))); 
         width: 15vw;
         text-align: center;
     }
