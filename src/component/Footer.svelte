@@ -7,8 +7,8 @@
         </div>
         <div class="footer-uni">
             <br>
-            
-            The Mysore Road Campus offers a blend of traditional and world-class facilities, including department-specific buildings, libraries, research facilities, and residences, amidst the city's greenery.        </div>
+
+            The Kengeri Campus offers a blend of traditional and world-class facilities, including department-specific buildings, libraries, research facilities, and residences, amidst the city's greenery.        </div>
     </div>
     <ul class="footer-links">
         <li class="header">

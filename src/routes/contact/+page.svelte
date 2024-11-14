@@ -42,8 +42,7 @@
         <div class="contact-info">
             <h1>Contact us</h1>
             <p>
-                <span>Address : </span> Dharmaram College Post, Hosur Road, Bengaluru - 560029,
-                Karnataka, India
+                <span>Address : </span> Campus, Mysore Rd, Kanmanike, Kengeri, Bengaluru, Kumbalgodu, Karnataka 560074
                 <br>
                 <span>Tel No : </span>+91 804012 9100 / 9600
                 <br>
