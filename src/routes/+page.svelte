@@ -44,13 +44,46 @@ onMount(()=>{
         <div class="video-div" data-aos="fade-down">
             <h1> 
                 Checkout<span>
-                    Teaser
+                    Trailer
                 </span>
             </h1>
             <center>
-                <video src="./video.mp4" controls loop autoplay></video>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCWZrMuSBcl/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#181818; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(255,255,255,0.2),0 1px 10px 0 rgba(255,255,255,0.1); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:16px;">
+                      <a href="https://www.instagram.com/reel/DCWZrMuSBcl/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#242424; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                          <div style="background-color: #383838; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                          <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                            <div style="background-color: #383838; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                            <div style="background-color: #383838; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                          </div>
+                        </div>
+                        <div style="padding: 19% 0;"></div>
+                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                          <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g transform="translate(-511.000000, -20.000000)" fill="#FFFFFF">
+                                <g>
+                                  <path d="..."></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <div style="padding-top: 8px;">
+                          <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div>
+                        </div>
+                        <div style="padding: 12.5% 0;"></div>
+                      </a>
+                      <p style="color:#888888; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                        <a href="https://www.instagram.com/reel/DCWZrMuSBcl/?utm_source=ig_embed&amp;utm_campaign=loading" style="color:#888888; text-decoration:none;" target="_blank">Instagram Link</a>
+                      </p>
+                    </div>
+                  </blockquote>
+                  <script async src="//www.instagram.com/embed.js"></script>
             </center>
         </div>
+        <div style="height: 10vh;"></div>
         <div style:height="10vh"></div>
                 <div class="home-info" data-aos="fade-up">
                 <ul>
