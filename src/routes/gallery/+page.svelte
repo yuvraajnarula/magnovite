@@ -12,7 +12,7 @@
         "/IMG_9749.JPG", "/IMG_9824.JPG", "/IMG_9897.JPG", "/IMG_9922.JPG",
         "/IMG_9991.JPG", "/IMG_9999.JPG", "/IMG_9992.JPG",
         "/AT3A3015.JPG", 
-        "/AT3A3005.JPG",    
+        "/AT3A3005.JPG",   "AT3A3207.JPG", 
     ];
     let selectedImage = null;
 
@@ -26,11 +26,6 @@
 </script>
 
 <style>
-    .gallery-div {
-        padding: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 
     .gallery-grid {
         display: grid;
@@ -69,7 +64,10 @@
         max-height: 90%;
         border-radius: 8px;
     }
-
+    .gallery{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .lightbox .close {
         position: absolute;
         top: 20px;
@@ -89,25 +87,29 @@
 <div class="gallery-div">
     <Nav />
     <MobileNav />
+    <div class="bg-bubble">
+    </div>
     <center>
         <h1>Our Gallery</h1>
         <p>Checkout our memory hauls from last year and be a part of it.</p>
     </center>
+    <div class="gallery">
+        <div class="gallery-grid">
+            {#each bgList as bg}
+                <img src={bg} alt="Gallery Image" loading="lazy" on:click={() => openLightbox(bg)} />
+            {/each}
+        </div>
     
-    <!-- Gallery Grid -->
-    <div class="gallery-grid">
-        {#each bgList as bg}
-            <img src={bg} alt="Gallery Image" loading="lazy" on:click={() => openLightbox(bg)} />
-        {/each}
+        <!-- Lightbox -->
+        {#if selectedImage}
+            <div class="lightbox" on:click={closeLightbox}>
+                <span class="close" on:click|stopPropagation={closeLightbox}>&times;</span>
+                <img src={selectedImage} alt="Selected Image" />
+            </div>
+        {/if}
     </div>
 
-    <!-- Lightbox -->
-    {#if selectedImage}
-        <div class="lightbox" on:click={closeLightbox}>
-            <span class="close" on:click|stopPropagation={closeLightbox}>&times;</span>
-            <img src={selectedImage} alt="Selected Image" />
-        </div>
-    {/if}
+
 
     <Footer />
 </div>

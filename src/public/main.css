@@ -296,7 +296,8 @@ html {
 }
 .about-info .about-grid .card-component{
     width: 90%;
-    height: calc(max(13.5vw, min(25vw, 200px))); 
+    min-height: 27.5vw;
+    max-height: 47.5vw; 
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4.8px);
     border-radius: 10px;
@@ -608,7 +609,8 @@ html {
         flex-direction: column;
     }
     .card-component {
-        height: fit-content !important;
+        min-height: 80vh !important;
+        max-height:92.5vh !important;
     }
     .contact-flex{
         flex-direction: column-reverse;

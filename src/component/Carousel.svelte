@@ -148,7 +148,7 @@ backdrop-filter: blur(5.6px);
 }
 @media only screen and (max-width:765px){
     .select-container{
-        width: 71.5%;
+        width: 70.5%;
         margin-top: 2.5vw;
         border-radius: 10px;
     }
