@@ -4,14 +4,14 @@
     import MobileNav from "../../component/MobileNav.svelte";
     import Footer from "../../component/Footer.svelte";
     let bgList = [
-        "/DSC_0128.JPG", "/DSC_0166.JPG", "/DSC_0169.JPG", "/IMG_0173.JPG",
+        "/DSC_0128.JPG",        "/AT3A3015.JPG", "/DSC_0166.JPG", "/DSC_0169.JPG", "/IMG_0173.JPG",
         "/DSC_0166.JPG", "/IMG_0676.JPG", "/IMG_0679.JPG", "/IMG_0767.JPG",
         "/IMG_0772.JPG", "/IMG_0777.JPG", "/IMG_0797.JPG", "/IMG_0824.JPG",
         "/IMG_0833.JPG", "/IMG_0850.JPG", "/IMG_0853.JPG", "/IMG_0864.JPG",
         "/IMG_1090.JPG", "/IMG_5467.JPG", "/IMG_5470.JPG", "/IMG_9700.JPG",
         "/IMG_9749.JPG", "/IMG_9824.JPG", "/IMG_9897.JPG", "/IMG_9922.JPG",
         "/IMG_9991.JPG", "/IMG_9999.JPG", "/IMG_9992.JPG",
-        "/AT3A3015.JPG", 
+ 
         "/AT3A3005.JPG",   "AT3A3207.JPG", 
     ];
     let selectedImage = null;

@@ -229,14 +229,14 @@
         "desc": "Individual singing competition in the western music category.",
         "tags": ["cultural", "music", "solo"],
         "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
-        "img" : "/eventcards/westernsolo.JPG"
+        "img" : "/eventcards/westernsolo.png"
     },
     {
         "title": "SOLO SINGING (INDIAN)",
         "desc": "Showcase talent in Indian music with solo singing performances.",
         "tags": ["cultural", "music", "Indian"],
         "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
-                "img" : "/eventcards/westernsolo.JPG"
+                "img" : "/eventcards/indiansolo.JPG"
     },
     {
         "title": "INDIAN GROUP DANCE",
