@@ -227,21 +227,21 @@
     {
         "title": "SOLO SINGING (WESTERN)",
         "desc": "Individual singing competition in the western music category.",
-        "tags": ["cultural", "music", "solo"],
+        "tags": ["cultural", "music","western", "solo"],
         "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
         "img" : "/eventcards/westernsolo.png"
     },
     {
         "title": "SOLO SINGING (INDIAN)",
         "desc": "Showcase talent in Indian music with solo singing performances.",
-        "tags": ["cultural", "music", "Indian"],
+        "tags": ["cultural", "music", "solo", "indian"],
         "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
                 "img" : "/eventcards/indiansolo.JPG"
     },
     {
         "title": "INDIAN GROUP DANCE",
         "desc": "A group dance competition celebrating Indian dance forms.",
-        "tags": ["cultural", "dance", "Indian"],
+        "tags": ["cultural", "dance", "indian"],
         "link" : "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
         "img" : "/eventcards/indiangroup.jpg "
     },
