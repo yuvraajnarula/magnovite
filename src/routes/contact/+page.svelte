@@ -24,12 +24,12 @@
     {
         "name": "Vyshnavi",
         "role" : "Core Member",
-        "no" : 8777366862
+        "no" : 8105462515
     },
     {
         "name" : "Meet Ravrani",
         "role" : "Core Member",
-        "no" : 8105462515
+        "no" :  8777366862
     }
   ]
 </script>
@@ -67,7 +67,7 @@
                 <span>
                     SWO {contact.role}
                 </span> <br><br>        
-                <a href="tel:+{contact.no}">
+                <a href="tel:+91{contact.no}">
                     <span>
                         Phone Number
                     </span>
