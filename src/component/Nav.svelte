@@ -7,7 +7,7 @@
     <div class="nav-links">
         <ul>
             <li>
-                <a href="/" rel="noopener noreferrer">
+                <a href="./" rel="noopener noreferrer">
                     Home
                 </a>
             </li>

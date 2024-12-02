@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magnovite 2024</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/magnovite.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/search.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/morph.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      .search {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+        transition: all 0.4s ease;
+        font-family: "Inter", sans-serif;
+        color: #eee;
+        width: 20vw;
+        border-radius: 10px;
+        cursor: auto;
+      }
+      .search::placeholder {
+        color: rgba(255, 255, 255, 0.05);
+      }
+      .search:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.08);
+        border: 2px solid rgba(255, 255, 255, 0.08);
+      }
+      .active {
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .active span {
+        color: #111 !important;
+      }
+      @media only screen and (max-width: 768px) {
+        .search {
+          width: 80%;
+        }
+      }
+      .grid-img {
+        width: 95%;
+        margin: 10px auto;
+        border-radius: 10px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <div class="bubble"></div>
+      <div class="loading">
+        <span data-text="M">M</span>
+        <span data-text="A">A</span>
+        <span data-text="G">G</span>
+        <span data-text="N">N</span>
+        <span data-text="O">O</span>
+        <span data-text="V">V</span>
+        <span data-text="I">I</span>
+        <span data-text="T">T</span>
+        <span data-text="E">E</span>
+      </div>
+    </div>
+    <div class="contact-div">
+      <div class="bg-bubble"></div>
+      <div class="mobile-nav-flex">
+        <div class="mobile-logo"></div>
+        <div class="hamburger" id="hamburger">☰</div>
+      </div>
+
+      <div class="mobile-nav-component" id="myNav">
+        <span class="closebtn" id="closeBtn">&times;</span>
+        <div class="hamburger-menu">
+          <ul class="burger-list">
+            <li>
+              <img
+                src="./assets/magnovite.png"
+                width="100"
+                height="100"
+                alt="Magnovite Logo"
+              />
+            </li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="/event.html">Event</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li>
+              <a
+                href="https://linktr.ee/magnovite24christkengeri"
+                target="_blank"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-component">
+        <div class="nav-logo"></div>
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="./index.html" rel="noopener noreferrer">Home</a>
+            </li>
+            <li>
+              <a href="./event.html" rel="noopener noreferrer">Events</a>
+            </li>
+            <li>
+              <a href="./gallery.html" rel="noopener noreferrer">Gallery</a>
+            </li>
+            <li>
+              <a href="./contact.html" rel="noopener noreferrer">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-link-btn" onclick="link()">Register</div>
+      </div>
+      <section id="events">
+        <div class="about-div">
+          <div class="about-info">
+            <h1>Our Events</h1>
+            <p>
+              Welcome! Register now to secure your spot at our upcoming events.
+              Don't miss out on unique experiences designed for learning,
+              enjoyment, and connection. Select your event below and register
+              today!
+            </p>
+            <a href="./assets/doc/brochure.pdf" target="_blank">
+              <span> View Brochure </span> </a
+            ><br /><br /><input
+              type="search"
+              placeholder="Search Events"
+              class="search"
+              bind:value="{searchQuery}"
+            />
+            <div class="select-container">
+              <span class="selected-display" id="destination"
+                >Select Event</span
+              >
+              <svg
+                width="12"
+                height="6"
+                viewBox="0 0 12 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.0689 0.156988L6.38395 4.76799C6.28173 4.86912 6.14374 4.92584 5.99995 4.92584C5.85616 4.92584 5.71817 4.86912 5.61595 4.76799L0.930947 0.157989C0.828092 0.0569129 0.689654 0.000276566 0.545447 0.000276566C0.401241 0.000276566 0.262803 0.0569129 0.159947 0.157989C0.109299 0.207366 0.0690468 0.266381 0.041563 0.331558C0.0140793 0.396735 -8.01086e-05 0.466754 -8.01086e-05 0.537489C-8.01086e-05 0.608223 0.0140793 0.678242 0.041563 0.743419C0.0690468 0.808595 0.109299 0.867611 0.159947 0.916988L4.84395 5.52699C5.15247 5.82991 5.56757 5.99963 5.99995 5.99963C6.43232 5.99963 6.84743 5.82991 7.15595 5.52699L11.8399 0.916988C11.8907 0.867596 11.9311 0.808518 11.9587 0.743249C11.9863 0.67798 12.0005 0.607843 12.0005 0.536988C12.0005 0.466133 11.9863 0.395998 11.9587 0.330729C11.9311 0.265459 11.8907 0.206381 11.8399 0.156988C11.7371 0.0559125 11.5987 -0.000723839 11.4544 -0.000723839C11.3102 -0.000723839 11.1718 0.0559125 11.0689 0.156988Z"
+                  fill="white"
+                />
+              </svg>
+
+              <ul class="dropdown" id="dropdown"></ul>
+            </div>
+            <div class="about-grid">
+              <script>
+                const events = [
+                  // Management Events
+                  {
+                    title: "BEST MANAGEMENT TEAM",
+                    desc: "Compete in corporate strategy and team dynamics for top management honors.",
+                    tags: ["management", "strategy"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/bestmanagement.jpg",
+                  },
+                  {
+                    title: "CORPORATE SOCIAL RESPONSIBILITY",
+                    desc: "Explore the role of companies in making a positive societal impact.",
+                    tags: ["management", "social impact"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/corporatesocial.jpg",
+                  },
+                  {
+                    title: "BEST MANAGER",
+                    desc: "Showcase leadership skills through challenges in a competitive environment.",
+                    tags: ["management", "leadership"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/bestmanager.jpg",
+                  },
+                  {
+                    title: "FINANCE",
+                    desc: "Navigate complex financial scenarios in a competitive team-based event.",
+                    tags: ["management", "finance"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/finance.jpg",
+                  },
+                  {
+                    title: "HUMAN RESOURCES",
+                    desc: "Engage in exciting HR-based challenges, including case studies and hiring simulations.",
+                    tags: ["management", "HR"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/hr.jpg",
+                  },
+                  {
+                    title: "PUBLIC RELATIONS",
+                    desc: "Develop communication strategies in a fast-paced PR competition.",
+                    tags: ["management", "PR"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/pr.jpg",
+                  },
+                  {
+                    title: "MARKETING",
+                    desc: "Pitch and market products effectively to stand out in the competition.",
+                    tags: ["management", "marketing"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/marketing.jpg",
+                  },
+                  {
+                    title: "BUSINESS QUIZ",
+                    desc: "Test your business knowledge with a challenging quiz competition.",
+                    tags: ["management", "quiz"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/businessquiz.jpg",
+                  },
+                  {
+                    title: "BUSINESS PLAN",
+                    desc: "Create a detailed business plan, from idea inception to execution.",
+                    tags: ["management", "planning"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLScJzDO0MyrJQVtvmCkiVpC_OfH1da4TCWQiCck2Z1UYyqfYGQ/viewform",
+                    img: "./assets/eventcards/businessplan.jpg",
+                  },
+
+                  // Architecture Events
+                  {
+                    title: "REVIVAL OUTLOOK",
+                    desc: "Fashion design competition focused on innovative concepts.",
+                    tags: ["architecture", "design"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform",
+                    img: "./assets/eventcards/revival.jpg",
+                  },
+                  {
+                    title: "SPILL ART",
+                    desc: "Create art from a spilled ink pattern using unique techniques.",
+                    tags: ["architecture", "art"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform",
+                    img: "./assets/eventcards/spillart.jpg",
+                  },
+                  {
+                    title: "TERRABSTRACT",
+                    desc: "Sculpt abstract designs using clay provided on-site.",
+                    tags: ["architecture", "sculpture"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform",
+                    img: "./assets/eventcards/terrabstract.jpg",
+                  },
+                  {
+                    title: "GLIMPSE INTO THE UNFOCUSED",
+                    desc: "An online photography competition based on assigned themes.",
+                    tags: ["architecture", "photography"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeFH1mzF_tG5UojbuC-zJePwThP-PT33a1ysaRjbfHhB9SZjA/viewform",
+                    img: "./assets/eventcards/glimpse.jpg",
+                  },
+
+                  // Technical Events
+                  {
+                    title: "RC ROBOSOCCER 2.0",
+                    desc: "Build and program robots to play soccer and compete with other teams.",
+                    tags: ["technical", "robotics", "engineering"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/robosoc.jpg",
+                  },
+                  {
+                    title: "MAZE – MERISE",
+                    desc: "Design an autonomous robot to navigate a maze efficiently.",
+                    tags: ["technical", "robotics", "programming"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/maze.jpg",
+                  },
+                  {
+                    title: "ENIGMA REDESIGNED",
+                    desc: "A cryptographic challenge with multiple rounds of code-breaking and debugging.",
+                    tags: ["technical", "coding", "cryptography"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/enigma.jpg",
+                  },
+                  {
+                    title: "SPARK-A-THON",
+                    desc: "Pitch innovative tech solutions through ideation and prototyping.",
+                    tags: ["technical", "innovation", "pitching"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/spark.jpg",
+                  },
+                  {
+                    title: "SMART PITCH",
+                    desc: "Pitch civil engineering ideas with innovative business models.",
+                    tags: ["technical", "pitching", "civil engineering"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/smartpitch.jpg",
+                  },
+                  {
+                    title: "INNOVATIVE CAD DESIGNER",
+                    desc: "Showcase creativity and skill in computer-aided design.",
+                    tags: ["technical", "design", "CAD"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/cad.jpg",
+                  },
+                  {
+                    title: "THE GENTLEMAN BURGLAR",
+                    desc: "Simulate a bank heist through rounds focused on decryption, debugging, and circuit design.",
+                    tags: ["technical", "coding", "circuit design"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/gentlemen.jpg",
+                  },
+                  {
+                    title: "OHM-AZING BUILD-A-THON",
+                    desc: "Timed circuit-building rounds to test electrical engineering skills.",
+                    tags: ["technical", "circuit design", "engineering"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/ohmazing.jpg",
+                  },
+                  {
+                    title: "EV HACKATHON",
+                    desc: "Engage in electric vehicle challenges, from part identification to real-time battery monitoring.",
+                    tags: ["technical", "engineering", "sustainability"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSeN7wq_nVIGBPyjSbk8m_9mFr0O0gwJJelPEUsPNugg-e_LdA/viewform",
+                    img: "./assets/eventcards/evhackathon.jpg",
+                  },
+
+                  // Psychology Events
+                  {
+                    title: "HOW I MET YOUR KILLER",
+                    desc: "Solve a fictional murder mystery through detective skills and teamwork.",
+                    tags: ["psychology", "mystery", "teamwork"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSci6pUM6ma06tt3Jtf3OtZw_XFIth8vypqi6-XtjjUDPKZSgw/viewform",
+                    img: "./assets/eventcards/kill.jpg",
+                  },
+                  {
+                    title: "AD-VENTURE",
+                    desc: "Reimagine ordinary products and pitch creative marketing campaigns.",
+                    tags: ["psychology", "creativity", "marketing"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSci6pUM6ma06tt3Jtf3OtZw_XFIth8vypqi6-XtjjUDPKZSgw/viewform",
+                    img: "./assets/eventcards/adventure.jpg",
+                  },
+                  {
+                    title: "Switch and Scene",
+                    desc: " Pairs of performers dive into spontaneous improv, facing sudden role reversals and genre changes with just minutes to prepare. Watch as they adapt on the fly, switching from strict boss to nervous employee or shifting from romance to horror in unpredictable and entertaining ways!  ",
+                    tags: ["psychology", "creativity", "theatre"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSci6pUM6ma06tt3Jtf3OtZw_XFIth8vypqi6-XtjjUDPKZSgw/viewform",
+                    img: "./assets/eventcards/switch.jpg",
+                  },
+                  {
+                    title: "INK AND TALE",
+                    desc: "Create a captivating short story or comic based on assigned characters and genres.",
+                    tags: ["psychology", "creativity", "storytelling"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/inktale.jpg",
+                  },
+                  //debate
+                  {
+                    title: "Convince and Conquer : The Art of Persuasion",
+                    desc: "A two-day event designed to challenge students to articulate and advocate for robust ideas on the theme of “Achieving Academic and Professional Balance for Industry Readiness.”",
+                    tags: ["debate", "academia"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSdqz6Gyk9WOKXyShoXbT7xHjuLadrF_CsHN3X2ELwpNbYwTTA/viewform",
+                    img: "./assets/eventcards/debate.jpg",
+                  },
+                  // Cultural Events
+                  {
+                    title: "BATTLE OF BANDS",
+                    desc: "Showcase your musical talent in an energetic battle of bands competition.",
+                    tags: ["cultural", "music", "performance"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/bob.JPG",
+                  },
+                  {
+                    title: "ACAPELLA AND GROUP SINGING",
+                    desc: "Team singing event celebrating vocal harmony and creativity.",
+                    tags: ["cultural", "music", "singing"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/acapella.jpg",
+                  },
+                  {
+                    title: "SOLO SINGING (WESTERN)",
+                    desc: "Individual singing competition in the western music category.",
+                    tags: ["cultural", "music", "western", "solo"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/westernsolo.png",
+                  },
+                  {
+                    title: "SOLO SINGING (INDIAN)",
+                    desc: "Showcase talent in Indian music with solo singing performances.",
+                    tags: ["cultural", "music", "solo", "indian"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/indiansolo.JPG",
+                  },
+                  {
+                    title: "INDIAN GROUP DANCE",
+                    desc: "A group dance competition celebrating Indian dance forms.",
+                    tags: ["cultural", "dance", "indian"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/indiangroup.jpg ",
+                  },
+                  {
+                    title: "WESTERN GROUP DANCE",
+                    desc: "Group dance competition focusing on Western dance styles.",
+                    tags: ["cultural", "dance", "Western"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/westerngroup.jpg",
+                  },
+                  {
+                    title: "SPOT CHOREOGRAPHY",
+                    desc: "A fast-paced choreography competition with on-the-spot themes.",
+                    tags: ["cultural", "dance", "choreography"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/spotchoreo.JPG",
+                  },
+                  {
+                    title: "STREET PLAY",
+                    desc: "Perform compelling street theater with social or comedic themes.",
+                    tags: ["cultural", "theater", "social"],
+                    link: "https://docs.google.com/forms/d/e/1FAIpQLSd89HjabndqYQd7GBVYeSbia3lVjZg-pUbfS7Xg9Fvyx9yQsA/viewform",
+                    img: "./assets/eventcards/streetplay.jpg",
+                  },
+                ];
+
+                let uniqueTags = new Set();
+                events.forEach((event) => {
+                  event.tags.forEach((tag) => {
+                    uniqueTags.add(tag);
+                  });
+                });
+
+                const tags = Array.from(uniqueTags);
+                let currentCarouselTag = "All";
+                const dropdown = document.getElementById("dropdown");
+
+                uniqueTags.forEach((tag) => {
+                  const li = document.createElement("li");
+                  li.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
+                  li.onclick = () => selectTag(tag);
+                  dropdown.appendChild(li);
+                });
+
+                function renderEvents(eventsList) {
+                  const container = document.querySelector(".about-grid");
+                  container.innerHTML = "";
+                  eventsList.forEach((event) => {
+                    const card = document.createElement("div");
+                    card.className = "card-component";
+                    card.innerHTML = `
+          <img  class="grid-img" src="${event.img}" alt="${event.title}">
+          <h3>${event.title}</h3>
+          <p>${event.desc}</p>
+          <a href="${event.link}" target="_blank"><span>Learn More</span></a>
+        `;
+                    container.appendChild(card);
+                  });
+                }
+
+                function filterEvents(query) {
+                  const lowerQuery = query.toLowerCase();
+                  return events.filter((event) => {
+                    const matchesQuery =
+                      event.title.toLowerCase().includes(lowerQuery) ||
+                      event.tags.some((tag) =>
+                        tag.toLowerCase().includes(lowerQuery)
+                      );
+                    const matchesCarousel =
+                      currentCarouselTag === "All" ||
+                      event.tags.includes(currentCarouselTag);
+                    return matchesQuery && matchesCarousel;
+                  });
+                }
+
+                document
+                  .querySelector(".search")
+                  .addEventListener("keyup", (e) => {
+                    const filtered = filterEvents(e.target.value);
+                    renderEvents(filtered);
+                  });
+
+                renderEvents(events);
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style="height: 10vh"></div>
+      <div class="footer">
+        <div class="footer-info">
+          <div class="footer-icon-flex">
+            <div class="icon-1"></div>
+            <span class="line">|</span>
+            <div class="icon-2"></div>
+          </div>
+          <div class="footer-uni">
+            <br />
+
+            Christ University, Kengeri Campus offers a blend of traditional and
+            world-class facilities, including department-specific buildings,
+            libraries, research facilities, and residences, amidst the city's
+            greenery.
+          </div>
+        </div>
+        <ul class="footer-links">
+          <li class="header">Links</li>
+          <li><a href="/event">Event</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li>
+            <a href="https://linktr.ee/magnovite24christkengeri" target="_blank"
+              >Register</a
+            >
+          </li>
+        </ul>
+        <div class="footer-event-info">
+          <div class="footer-para">
+            MAGNOVITE, the 14th edition of CHRIST University's flagship fest,
+            fosters creativity, collaboration, healthy competition, and positive
+            connections among participants.
+            <br />
+            <br />
+            - developed by
+            <a
+              href="https://github.com/yuvraajnarula"
+              target="_blank"
+              style="text-decoration: none; color: rgba(255, 255, 255, 0.2)"
+              >Yuvraaj Narula</a
+            >
+          </div>
+
+          <ul class="footer-social-links">
+            <li>
+              <a
+                href="https://www.linkedin.com/company/christ-university-faculty-of-engineering/?originalSubdomain=in"
+                target="_blank"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7778 0C18.3671 0 18.9324 0.234126 19.3491 0.650874C19.7659 1.06762 20 1.63285 20 2.22222V17.7778C20 18.3671 19.7659 18.9324 19.3491 19.3491C18.9324 19.7659 18.3671 20 17.7778 20H2.22222C1.63285 20 1.06762 19.7659 0.650874 19.3491C0.234126 18.9324 0 18.3671 0 17.7778V2.22222C0 1.63285 0.234126 1.06762 0.650874 0.650874C1.06762 0.234126 1.63285 0 2.22222 0H17.7778ZM17.2222 17.2222V11.3333C17.2222 10.3727 16.8406 9.45133 16.1613 8.77204C15.482 8.09274 14.5607 7.71111 13.6 7.71111C12.6556 7.71111 11.5556 8.28889 11.0222 9.15556V7.92222H7.92222V17.2222H11.0222V11.7444C11.0222 10.8889 11.7111 10.1889 12.5667 10.1889C12.9792 10.1889 13.3749 10.3528 13.6666 10.6445C13.9583 10.9362 14.1222 11.3319 14.1222 11.7444V17.2222H17.2222ZM4.31111 6.17778C4.80618 6.17778 5.28098 5.98111 5.63104 5.63104C5.98111 5.28098 6.17778 4.80618 6.17778 4.31111C6.17778 3.27778 5.34444 2.43333 4.31111 2.43333C3.81309 2.43333 3.33547 2.63117 2.98332 2.98332C2.63117 3.33547 2.43333 3.81309 2.43333 4.31111C2.43333 5.34444 3.27778 6.17778 4.31111 6.17778ZM5.85556 17.2222V7.92222H2.77778V17.2222H5.85556Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://christuniversity.in" target="_blank">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 11C21 13.6522 19.9464 16.1957 18.0711 18.0711C16.1957 19.9464 13.6522 21 11 21C8.34784 21 5.8043 19.9464 3.92893 18.0711C2.05357 16.1957 1 13.6522 1 11M21 11C21 8.34784 19.9464 5.8043 18.0711 3.92893C16.1957 2.05357 13.6522 1 11 1C8.34784 1 5.8043 2.05357 3.92893 3.92893C2.05357 5.8043 1 8.34784 1 11M21 11H1"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.8461 11C14.6572 14.6569 13.3102 18.159 11 21C8.68969 18.159 7.34273 14.6569 7.15381 11C7.34273 7.34309 8.68969 3.841 11 1C13.3102 3.841 14.6572 7.34309 14.8461 11Z"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/magnovite.kengeri/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      function link() {
+        window.open("https://linktr.ee/magnovite24christkengeri", "_blank");
+      }
+      window.onload = () => {
+        if (typeof AOS !== "undefined") {
+          AOS.init();
+        }
+      };
+      setTimeout(function () {
+        const loader = document.getElementById("loader");
+        loader.style.display = "none";
+      }, 2000);
+      const hamburger = document.getElementById("hamburger");
+      const closeBtn = document.getElementById("closeBtn");
+      const myNav = document.getElementById("myNav");
+
+      function openNav() {
+        myNav.classList.add("open");
+      }
+
+      function closeNav() {
+        myNav.classList.remove("open");
+      }
+
+      hamburger.addEventListener("click", openNav);
+      closeBtn.addEventListener("click", closeNav);
+    </script>
+  </body>
+</html>
